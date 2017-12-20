@@ -54,5 +54,8 @@ to show how to deploy your own algorithm container with SageMaker using Terrafor
     
     # make test call to the deployed model
     aws runtime.sagemaker invoke-endpoint --endpoint-name terraform-sagemaker-example \
-        --body "`cat ./local_test/payload.csv`" --content-type "text/csv" "output.dat"
+        --body "`cat payload.csv`" --content-type "text/csv" "output.dat"
+        
+    # show the predicted values
+    cat output.dat
 ```
