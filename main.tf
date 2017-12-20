@@ -1,4 +1,5 @@
 provider "aws" {
+  # use a custom-built provider for now until SageMaker support is released
   version = "0.0.0"
   region = "us-west-2"
 }
